@@ -60,7 +60,7 @@ def register_short_mission(request):
 def register_long_mission(request):
     status = 'failed'
     message = 'Longterm mission created !'
-    Longterm_mission_count = 0
+    longterm_mission_count = 0
     try:
         if request.method == 'POST':
             json_data = json.loads(request.body)
@@ -104,7 +104,7 @@ def register_long_mission(request):
                     related_link_3 = related_link_3
                 )
         status = "Success"
-        longerm_mission_count = len(LongtermMissionList.objects.all())
+        longterm_mission_count = len(LongtermMissionList.objects.all())
     except:
         try:
             LongtermMissionList.objects.get(name=name)
