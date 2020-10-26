@@ -24,9 +24,9 @@ class LongtermMissionList(models.Model):
     emergency_level = models.IntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)])
     important_level = models.IntegerField(default=1, validators=[MinValueValidator(1), MaxValueValidator(5)])
     detail = models.TextField(max_length=500, blank=True)
-    releated_link_1 = models.URLField(blank=True)
-    releated_link_2 = models.URLField(blank=True)
-    releated_link_3 = models.URLField(blank=True)
+    related_link_1 = models.URLField(blank=True)
+    related_link_2 = models.URLField(blank=True)
+    related_link_3 = models.URLField(blank=True)
     def __str__(self):
         return self.name
 class slogan(models.Model):
