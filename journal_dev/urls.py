@@ -21,4 +21,5 @@ from MissionCreate import views as mission_create_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('shortern-mission-register/', mission_create_views.register_short_mission),
+    path('longtern-mission-register/', mission_create_views.register_long_mission),
 ]
