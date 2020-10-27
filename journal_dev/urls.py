@@ -17,9 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from MissionCreate import views as mission_create_views
-
+from UserRegister import views as user_register_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('shortern-mission-register/', mission_create_views.register_short_mission),
     path('longtern-mission-register/', mission_create_views.register_long_mission),
+    path('user-register/', user_register_views.user_register),
 ]

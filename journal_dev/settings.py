@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'MissionCreate',
+    'UserRegister',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +120,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'                       
+EMAIL_PORT = 587                    
+EMAIL_HOST_USER = 'ast9501@ccns.ncku.edu.tw'
+EMAIL_HOST_PASSWORD = 'alan0415'              
+EMAIL_SUBJECT_PREFIX = u'django'       
+EMAIL_USE_TLS = True                  #與SMTP伺服器通訊時，是否啟動TLS連結(安全連結)。預設是false
+EMAIL_FROM = 'ast9501@ccns.ncku.edu.tw'
